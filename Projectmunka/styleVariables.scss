@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+$main-site-background-color: #FFFFFF;
+$font-family: 'Roboto', sans-serif;
+$welcome-title: 'Fuggles', cursive;
+$font-size: ('title': 115px);
+$font-weight: ('medium': 600);
+$border-line: #FFFFFF;
+$text-color: #FFFFFF;
+$border-left-height: 700px;
+$border-left-width: 500px;
+$border-right-height: 700px;
+$border-right-width: 1100px;
+$right-div-color: linear-gradient(95deg, #C9D6FF, #E2E2E2);
+$registration-button: linear-gradient(95deg, #000046, #1CB5E0);
+$registration-hover: linear-gradient(95deg, #1CB5E0, #000046);
+$sign-in-button: linear-gradient(95deg, #007991, #78FFD6);
+$sign-in-hover: linear-gradient(95deg, #78FFD6, #007991);
+$div-border-radius: 30px;
+
+@function textWeight ($weight-value) {
+  @return map-get($font-weight ,$weight-value)
+}
+
+@function textSize($size-value) {
+  @return map-get($font-size, $size-value)
+}
+
+@mixin flexCenter ($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin centerItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

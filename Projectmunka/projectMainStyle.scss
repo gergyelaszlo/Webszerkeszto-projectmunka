@@ -1,0 +1,102 @@
+@import 'styleVariables';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fuggles&display=swap');
+
+body {
+  background: $main-site-background-color;
+  font-family: $font-family;
+}
+
+#top_main {
+  @include flexCenter(row);
+  height: 100vh;
+  width: 100%;
+}
+
+#side_div {
+  border: 3px solid $border-line;
+  height: $border-left-height;
+  width: $border-left-width;
+  background-image: url(side-div.png);
+  border-radius: $div-border-radius;
+  margin-right: 15px;
+}
+
+#main_class_container {
+  border: 3px solid $border-line;
+  height: $border-right-height;
+  width: $border-right-width;
+  @include centerItem;
+  background: $right-div-color;
+  border-radius: $div-border-radius;
+  @include flexCenter(column);
+}
+
+.registration_text {
+  font-family: $welcome-title;
+  font-size: textSize(title);
+  margin-bottom: 60px;
+}
+
+.reminder_text {
+  margin-bottom: 30px;
+  font-weight: textWeight(medium);
+}
+
+form {
+  @include flexCenter(column);
+}
+
+li {
+  list-style-type: none;
+}
+
+input {
+  padding: 9px;
+  margin: 10px;
+  border-radius: 7px;
+  border: none;
+}
+
+.button_container {
+  @include flexCenter(column);
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+button {
+  margin: 15px;
+  padding: 15px 30px;
+  left: 80px;
+  text-transform: uppercase;
+  font-family: $font-family;
+  border-radius: 35px;
+  border: none;
+  cursor: pointer;
+}
+
+#registration_button {
+  background: $registration-button;
+  color: $text-color;
+
+  &:hover {
+    background: $registration-hover;
+  }
+}
+
+#sign_in_button {
+  background: $sign-in-button;
+  color: $text-color;
+
+  &:hover {
+    background: $sign-in-hover;
+  }
+}
+
+input:invalid:required {
+  border-bottom: 2px solid #f07167;
+}
+
+input:valid:required {
+  border-bottom: 2px solid #52b69a;
+}
